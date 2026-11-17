@@ -242,5 +242,5 @@ proc ::aws::ses::enabled_result {root} {boolean [xget $root Enabled false]}
 
 # Report whether SES sending is enabled for the account.
 proc ::aws::ses::_get_account_sending_enabled {client} {call $client GetAccountSendingEnabled {} ::aws::ses::enabled_result 1}
-package provide pure-tcl-aws-ses 0.1.1
+package provide pure-tcl-aws-ses 1.0.0
 package provide awsses 1.0.19
