@@ -9,7 +9,7 @@ namespace import ::tcltest::test
 lassign $argv library endpoint
 set argv {}
 lappend ::auto_path [file dirname [file dirname [info script]]]
-package require pure-tcl-aws-ses 0.1.0
+package require pure-tcl-aws-ses 0.1.1
 set config [dict create region us-east-1 endpoint $endpoint aws_access_key_id test aws_secret_access_key test]
 set client [::aws::ses::create $config]
 # Exercise the client-command and namespace-command API forms.

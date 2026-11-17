@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: MIT.
 # 
 
-package require pure-tcl-aws-core 0.1.0
+package require pure-tcl-aws-core 1.0.0
 namespace eval ::aws::ses {namespace path ::aws::core}
 ::aws::core::register ses {send_email send_raw_email send_templated_email create_template update_template get_template delete_template list_templates test_render_template verify_email_identity verify_domain_identity verify_domain_dkim list_identities get_identity_verification_attributes get_identity_dkim_attributes delete_identity get_send_quota get_send_statistics get_account_sending_enabled}
 
@@ -242,5 +242,5 @@ proc ::aws::ses::enabled_result {root} {boolean [xget $root Enabled false]}
 
 # Report whether SES sending is enabled for the account.
 proc ::aws::ses::_get_account_sending_enabled {client} {call $client GetAccountSendingEnabled {} ::aws::ses::enabled_result 1}
-package provide pure-tcl-aws-ses 0.1.0
+package provide pure-tcl-aws-ses 0.1.1
 package provide awsses 1.0.19
